@@ -1,0 +1,10 @@
+ul {
+  list-style: none;
+  padding: 1rem;
+}
+.user {
+  border: 1px solid gray;
+  border-radius: 0.25rem;
+  padding: 2px;
+  margin: 0.5rem 0;
+}

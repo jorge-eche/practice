@@ -1,0 +1,29 @@
+.modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.error_title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: -1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: purple;
+  color: white;
+  border-radius: 4px 4px 0 0;
+}
+
+.error_message {
+  font-size: 0.8rem;
+}
+
+.div_button {
+  text-align: right;
+}

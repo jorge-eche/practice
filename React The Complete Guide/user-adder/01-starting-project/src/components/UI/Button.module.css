@@ -1,0 +1,17 @@
+button {
+  background-color: purple;
+  color: white;
+  cursor: pointer;
+  border: 1px solid #4f005f;
+  padding: 0.25rem 1rem;
+}
+
+button:hover,
+button:active {
+  background: #741188;
+  border-color: #741188;
+}
+
+button:focus {
+  outline: none;
+}
