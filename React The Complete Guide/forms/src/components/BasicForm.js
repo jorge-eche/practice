@@ -8,6 +8,7 @@ const BasicForm = (props) => {
     inputCssClasses: nameClasses,
     valueChangeHandler: nameChangeHandler,
     valueBlurHandler: nameBlurHandler,
+    resetInput: resetNameInput,
   } = useInputState((value) => value.trim() === "");
 
   const {
@@ -17,6 +18,7 @@ const BasicForm = (props) => {
     inputCssClasses: lastNameClasses,
     valueChangeHandler: lastNameChangeHandler,
     valueBlurHandler: lastNameBlurHandler,
+    resetInput: resetLastNameInput,
   } = useInputState((value) => value.trim() === "");
 
   const {
@@ -26,6 +28,7 @@ const BasicForm = (props) => {
     inputCssClasses: emailClasses,
     valueChangeHandler: emailChangeHandler,
     valueBlurHandler: emailBlurHandler,
+    resetInput: resetEmailInput,
   } = useInputState((value) => !value.includes("@"));
 
   const formSubmitHandler = (event) => {
@@ -36,6 +39,9 @@ const BasicForm = (props) => {
       enteredLastName,
       enteredEmail,
     });
+    resetNameInput();
+    resetLastNameInput();
+    resetEmailInput();
   };
   return (
     <form onSubmit={formSubmitHandler}>

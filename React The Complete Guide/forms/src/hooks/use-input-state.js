@@ -17,6 +17,11 @@ const useInputState = (invalidCondition) => {
     setIsTouched(true);
   };
 
+  const resetInput = () => {
+    setEnteredValue("");
+    setIsTouched(false);
+  };
+
   return {
     value: enteredValue,
     isInvalid: valueIsInvalid,
@@ -24,6 +29,7 @@ const useInputState = (invalidCondition) => {
     inputCssClasses,
     valueChangeHandler,
     valueBlurHandler,
+    resetInput,
   };
 };
 
