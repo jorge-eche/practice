@@ -37,6 +37,9 @@ app.get("/about", (req, res) => {
 });
 
 //blog routes
+app.get("/blogs/create", (req, res) => {
+  res.render("create", { title: "Create Blog" });
+});
 
 app.get("/blogs", (req, res) => {
   Blog.find()
@@ -55,8 +58,15 @@ app.post("/blogs", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-app.get("/blogs/create", (req, res) => {
-  res.render("create", { title: "Create Blog" });
+app.get("/blogs/:id", (req, res) => {
+  const id = req.params.id;
+  Blog.findById(id)
+    .then((result) => {
+      res.render("details", { blog: result, title: "Blog Details" });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
 
 //404
